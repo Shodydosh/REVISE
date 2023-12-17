@@ -36,9 +36,16 @@ mat3 = np.dot(mat1, mat2)
 print(a) [[1, 2], [3, 4], [5, 6], [7, 8]]
 print(newa) [(1, 3, 5, 7), (2, 4, 6, 8)]
 print(mat3) [[  5  11  17  23]
-	 [ 11  25  39  53]
-	 [ 17  39  61  83]
-	 [ 23  53  83 113]]
+			 [ 11  25  39  53]
+			 [ 17  39  61  83]
+			 [ 23  53  83 113]]
+######
+# Tạo hai ma trận 2D - TÍCH CHẬP
+import numpy as np
+from scipy.signal import convolve2d
+matrix1 = np.array([[1, 2, 1], [0, 1, 0], [-1, -2, -1]])
+matrix2 = np.array([[1, 0, -1], [2, 1, -2], [1, 0, -1]])
+convolution_result = convolve2d(matrix1, matrix2, mode='valid')
 ```
 
 ## Dictionary
