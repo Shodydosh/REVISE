@@ -212,6 +212,12 @@ OUTPUT
 (2, 3)
 (3, 1)
 (3, 2)
+
+my_list = [1, 2, 3, 4]
+print("Original List:", my_list)
+print("Combinations of length 2:", combinations_result)
+Original List: [1, 2, 3, 4]
+Combinations of length 2: [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
 ```
 
 ## Set
