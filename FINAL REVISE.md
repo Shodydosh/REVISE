@@ -22,28 +22,23 @@ for _ in range(int(input())):
 
 ## Matrix
 ```python
-for _ in range(int(input())):
-    n, m = map(int, input().split())
-    a, b = [[0] * m]*n, []
-    # a co n cot, m hang
-    # b co m cot, n hang
-    # tich co n cot, n hang
-    for i in range(n):
-        a[i] = list(map(int, input().split()))
-    # CHUYEN VI
-    for i in range(m):
-        x = []
-        for j in range(n):
-            x += [a[j][i]]
-        b.append(x)
-    # TICH MA TRAN
-    for i in range(n):
-        for j in range(n):
-            s = 0
-            for z in range(m):
-                s += a[i][z] * b[z][j]
-            print(s, end=" ")
-        print()
+import numpy as np
+a = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [7, 8]
+]
+newa = list(zip(*a))
+mat1 = np.array(a)
+mat2 = np.array(newa)
+mat3 = np.dot(mat1, mat2)
+print(a) [[1, 2], [3, 4], [5, 6], [7, 8]]
+print(newa) [(1, 3, 5, 7), (2, 4, 6, 8)]
+print(mat3) [[  5  11  17  23]
+			 [ 11  25  39  53]
+			 [ 17  39  61  83]
+			 [ 23  53  83 113]]
 ```
 
 ## Dictionary
